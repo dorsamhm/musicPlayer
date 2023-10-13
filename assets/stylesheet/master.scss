@@ -1,0 +1,132 @@
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+body{
+    overflow: hidden;
+}
+
+.main{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    position: relative;
+    .playlist{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 400vw;
+        display: flex;
+        justify-content: center;align-items: center;
+        .song{
+            flex-grow: 1;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            padding: 0;
+            >video{
+                display: flex;
+                width: 100%;height: 100%;
+                position: absolute;
+                top: 0;left: 0;
+                object-fit: cover;
+            }
+            figure{
+                width: 300px;height: 500px;
+                z-index: 10;
+                margin: 0;
+                position: absolute;
+                display: flex;flex-wrap: wrap;
+                justify-content: center;align-items: center;
+                top: 50%;left: 50%;
+                transform: translate(-50%, -50%);
+                background-color:rgba(255, 255, 255, 0.365);
+                >img{
+                    width: 80%;
+                    height: 50%;
+                }
+                >figcaption{
+                    text-transform: capitalize;
+                    color: rgb(183, 179, 179);
+                    text-align: center;
+                    h3{
+                        width: 100%;
+                    }
+                    div{
+                        display: flex;
+                        justify-content: center;align-items: center;
+                        h4{
+                            text-transform: capitalize;
+                            color: rgb(183, 179, 179);
+                        }
+                        a{
+                            display: flex;
+                            // background-color: red;
+                            width: 50px;height: 50px;
+                            >i{
+                                font-size: 25px;
+                                font-weight: bold;
+                                color: grey;
+                                display: flex;
+                                transition: .4s;
+                                width: 100%;
+                                height: 100%;
+                                cursor: pointer;
+                                justify-content: center;align-items: center;
+                            }
+                        }
+                    }
+                }
+                input{
+                    -webkit-appearance: none;
+                    width: 70%;
+                    height: 5px;
+                    background-color: white;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    display: flex;
+                    margin: 10px;
+                }
+                input::-webkit-slider-thumb{
+                    -webkit-appearance: none;
+                    width: 30px;height: 30px;border-radius: 50%;
+                    border: 10px solid white;
+                    background-color: grey;
+                    box-shadow: 0 5px 5px grey;
+                }
+                .controls{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;align-items: center;
+                    >a{
+                        margin: 0 10px;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        background-color: rgba(255, 255, 255, 0.459);
+                        color: white;
+                        box-shadow: 0 5px 5px grey;
+                        cursor: pointer;
+                        i{
+                            width: 100%;height: 100%;
+                            display: flex;
+                            justify-content: center;align-items: center;
+                        }
+                        &:nth-of-type(2){
+                            width: 70px;
+                            height: 70px;
+                            background-color: white;
+                            color: rgba(126, 123, 123, 0.774);
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
